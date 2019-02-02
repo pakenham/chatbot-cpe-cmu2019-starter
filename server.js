@@ -26,10 +26,10 @@ app.post('/webhook', middleware(config), (req, res) => {
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjx4dK5yJzgAhUDqo8KHbLKBkEQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fsky%2F&psig=AOvVaw0-uQkem7zefLzRHGqVdujZ&ust=1549180292163682",
+            "thumbnailImageUrl": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "imageAspectRatio": "rectangle",
             "imageSize": "contain",
-            "imageBackgroundColor": "#FFFFFF",
+            "imageBackgroundColor": "#e9967a",
             "title": "Pakenham",
             "text": "Supitcha  Naterattana",
             "defaultAction": {
