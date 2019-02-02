@@ -8,7 +8,7 @@ const config = {  // get from  dev.line  channel
   channelSecret: 'e6f48551c7fce914aa23a62bbab1b948'
 }
 
-const config = new Client(config)
+const client = new Client(config)
 
 app.get('/', function (req, res) {
     res.send('Hello World!!')
