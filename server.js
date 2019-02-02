@@ -26,12 +26,12 @@ app.post('/webhook', middleware(config), (req, res) => {
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
+            "thumbnailImageUrl": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjx4dK5yJzgAhUDqo8KHbLKBkEQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fsky%2F&psig=AOvVaw0-uQkem7zefLzRHGqVdujZ&ust=1549180292163682",
             "imageAspectRatio": "rectangle",
-            "imageSize": "cover",
+            "imageSize": "contain",
             "imageBackgroundColor": "#FFFFFF",
-            "title": "Menu",
-            "text": "Please select",
+            "title": "Pakenham",
+            "text": "Supitcha  Naterattana",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
