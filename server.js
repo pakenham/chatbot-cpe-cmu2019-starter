@@ -20,43 +20,55 @@ app.post('/webhook', middleware(config), (req, res) => {
   if (event.type === 'message') {
     const message = event.message;  // store received message
     console.log(message)
-    client.replyMessage(event.replyToken, 
-      {
-        "type": "template",
-        "altText": "This is a buttons template",
-        "template": {
-            "type": "buttons",
-            "thumbnailImageUrl": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "imageAspectRatio": "rectangle",
-            "imageSize": "contain",
-            "imageBackgroundColor": "#E9967A",
-            "title": "Pakenham",
-            "text": "Supitcha  Naterattana",
-            "defaultAction": {
-                "type": "uri",
-                "label": "View detail",
-                "uri": "http://google.com/"
-            },
-            "actions": [
-                /*{
-                  "type": "postback",
-                  "label": "Buy",
-                  "data": "action=buy&itemid=123"
-                },*/
-                {
-                  "type": "uri",
-                  "label": "Facebook",
-                  "uri": "https://www.facebook.com/profile.php?id=100015487849238&ref=bookmarks"
-                },
-                {
-                  "type": "uri",
-                  "label": "CPE",
-                  "uri": "http://cpe.eng.cmu.ac.th/2013/"
-                },
-                
-            ]
-        }
-      })
+    client.replyMessage(event.replyToken, {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+          "type": "carousel",
+          "columns": [
+              {
+                "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
+                "imageBackgroundColor": "#FFFFFF",
+                "title": "this is menu",
+                "text": "description",
+                "actions": [
+                    {  
+                        "type":"cameraRoll",
+                        "label":"Camera roll"
+                    },
+                    {  
+                      "type":"location",
+                      "label":"Location"
+                   }
+                ]
+              },
+              {
+                "thumbnailImageUrl": "https://c.76.my/Malaysia/line-brown-bear-cute-pencil-case-ubiyo-1802-02-Ubiyo@6.jpg",
+                "imageBackgroundColor": "#000000",
+                "title": "this is menu",
+                "text": "description",
+                "actions": [
+                  {
+                    "type":"datetimepicker",
+                    "label":"Select date",
+                    "data":"storeId=12345",
+                    "mode":"datetime",
+                    "initial":"2017-12-25t00:00",
+                    "max":"2018-01-24t23:59",
+                    "min":"2017-12-25t00:00"
+                  },
+                  {  
+                    "type":"camera",
+                    "label":"Camera"
+                 }
+              ]
+              }
+          ],
+          "imageAspectRatio": "rectangle",
+          "imageSize": "cover"
+      }
+  })
+
   }
 })
 
