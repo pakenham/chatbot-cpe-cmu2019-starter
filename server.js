@@ -17,7 +17,6 @@ app.get('/', function (req, res) {
 
 // to do here
 app.post('/webhook', middleware(config), (req, res) => {
-  res.send('asdasd') // bot reply
   const event = req.body.events[0];  // received message
 
   if (event.type === 'message') {
