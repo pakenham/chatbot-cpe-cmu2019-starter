@@ -29,7 +29,7 @@ app.post('/webhook', middleware(config), (req, res) => {
             "thumbnailImageUrl": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "imageAspectRatio": "rectangle",
             "imageSize": "contain",
-            "imageBackgroundColor": "#e9967a",
+            "imageBackgroundColor": "#E9967A",
             "title": "Pakenham",
             "text": "Supitcha  Naterattana",
             "defaultAction": {
