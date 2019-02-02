@@ -12,9 +12,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/webhook', middleware(config), (req, res) => {
-  //req.body.events // webhook event objects
-  //req.body.destination // user ID of the bot (optional)
-  console.log('webhook success')
+  res.send('asdasd')
 })
 
 app.set('port', (process.env.PORT || 4000))
