@@ -8,7 +8,7 @@ const config = {  // get from  dev.line  channel
   channelSecret: 'e6f48551c7fce914aa23a62bbab1b948'
 }
 
-const = new Client(config)
+const config = new Client(config)
 
 app.get('/', function (req, res) {
     res.send('Hello World!!')
@@ -22,10 +22,10 @@ app.post('/webhook', middleware(config), (req, res) => {
 
   if (event.type === 'message') {
     const message = event.message;  // store received message
-
+    console.log(message)
     client.replyMessage(event.replyToken, { // reply fn
       type: 'text',
-      text: message,  // ส่งอะไรมา ส่งอะนนั้นกลับ (ที่เก็บใน message)
+      text: message.text  
     });
   }
 })
