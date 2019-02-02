@@ -32,33 +32,29 @@ app.post('/webhook', middleware(config), (req, res) => {
             "imageBackgroundColor": "#E9967A",
             "title": "Pakenham",
             "text": "Supitcha  Naterattana",
-            "defaultAction": [{
+            "defaultAction": {
                 "type": "uri",
-                "label": "Facebook",
-                "uri": "https://www.facebook.com/profile.php?id=100015487849238&ref=bookmarks"
+                "label": "View detail",
+                "uri": "http://google.com/"
             },
-            {
-              "type": "uri",
-                "label": "CPE",
-                "uri": "http://cpe.eng.cmu.ac.th/2013/"
-            }]
-            /*"actions": [
-                {
+            "actions": [
+                /*{
                   "type": "postback",
                   "label": "Buy",
                   "data": "action=buy&itemid=123"
-                },
+                },*/
                 {
-                  "type": "message",
-                  "label": "Add to cart",
-                  "text": "no no no"
+                  "type": "uri",
+                  "label": "Facebook",
+                  "uri": "https://www.facebook.com/profile.php?id=100015487849238&ref=bookmarks"
                 },
                 {
                   "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://google.com"
-                }
-            ]*/
+                  "label": "CPE",
+                  "uri": "http://cpe.eng.cmu.ac.th/2013/"
+                },
+                
+            ]
         }
       })
   }
